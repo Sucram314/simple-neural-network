@@ -3,7 +3,9 @@ import pickle as pk
 from collections.abc import Callable
 from mnist import MNIST
 
-MNIST_DIRECTORY = r"C:\Users\marcu\OneDrive\Desktop\Python Scripts\Bigger Projects\AI\neural_network\MNIST"
+import os
+
+MNIST_DIRECTORY = os.getcwd() + "\\MNIST"
 
 def load_data() -> tuple[np.ndarray,np.ndarray,np.ndarray,np.ndarray]:
     data = MNIST(MNIST_DIRECTORY)
