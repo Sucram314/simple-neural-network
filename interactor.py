@@ -4,8 +4,10 @@ import pygame
 from neural_network import *
 import numpy as np
 import pickle as pk
+import os
 
-CACHE = r"C:\Users\marcu\OneDrive\Desktop\Python Scripts\Bigger Projects\AI\neural_network" + "\\" + input("What model would you like to interact with?: ")
+DIRECTORY = os.getcwd()
+CACHE = DIRECTORY + "\\" + input("What model would you like to interact with?: ")
 
 with open(CACHE,"rb") as f:
     model : Neural_Network = pk.load(f)
