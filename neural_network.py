@@ -5,7 +5,8 @@ from mnist import MNIST
 
 import os
 
-MNIST_DIRECTORY = os.getcwd() + "\\MNIST"
+DIRECTORY = os.getcwd()
+MNIST_DIRECTORY = DIRECTORY + "\\MNIST"
 
 def load_data() -> tuple[np.ndarray,np.ndarray,np.ndarray,np.ndarray]:
     data = MNIST(MNIST_DIRECTORY)
@@ -152,7 +153,7 @@ class Neural_Network:
         return self.accuracy
 
 if __name__ == "__main__":
-    CACHE = r"C:\Users\marcu\OneDrive\Desktop\Python Scripts\Bigger Projects\AI\neural_network" + "\\" + input("What model would you like to train?: ")
+    CACHE = DIRECTORY + "\\" + input("What model would you like to train?: ")
 
     print("Loading Data...")
     testing_images, testing_labels, training_images, training_labels = load_data()
